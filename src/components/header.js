@@ -12,7 +12,7 @@ class Header extends Component {
   state = {
     title: 'the keywords are: ',
     keywords: '',
-    // count: 0,
+    count: 0,
   }
 
   inputChange(event){
