@@ -17,3 +17,11 @@ header input {
   font-size: 20px;
   margin: 20px 0px;
 }
+
+.active {
+  background-color: red;
+}
+
+.non-active {
+  background-color: blue
+}

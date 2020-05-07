@@ -7,6 +7,7 @@ import Header from './components/header';
 import NewsList from './components/news_list';
 import './styles.css';
 import JSON from './db.json';
+import Footer from './components/footer';
 
 // ReactDOM.render(
 //   <React.StrictMode>
@@ -24,6 +25,7 @@ class App extends Component {
 
     state = {
       news:JSON,
+      footerText:'I am a footer'
     }
 
 
@@ -31,7 +33,12 @@ class App extends Component {
     return (
       <div>
         <Header/>
-        <NewsList news={this.state.news}/>
+        <NewsList news={this.state.news}>
+          <br/>
+          <h1>I am a children</h1>
+        </NewsList>
+
+        <Footer footerText={this.state.footerText} />
       </div>
       )
   }
