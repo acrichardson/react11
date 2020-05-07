@@ -12,17 +12,17 @@ class Header extends Component {
   state = {
     active:'active',
     title: 'the keywords are: ',
-    keywords: '',
+    // keywords: '',
     count: 0,
   }
 
-  inputChange(event){
-    const value = event.target.value === '' ? 'active' : 'non-active';
-    this.setState({
-      active: value,
-      keywords: event.target.value,
-    })
-  }
+  // inputChange(event){
+  //   const value = event.target.value === '' ? 'active' : 'non-active';
+  //   this.setState({
+  //     active: value,
+  //     keywords: event.target.value,
+  //   })
+  // }
 
   addOne(){
     this.setState((state, props) => ({
@@ -36,7 +36,7 @@ class Header extends Component {
         <div
         className= 'logo'>Logo</div>
         <input
-          onChange={ (event) => this.inputChange(event) }
+          onChange= { this.props.keywords }
         />
         <div>{ this.state.title }</div>
         <div>{ this.state.keywords }</div>
